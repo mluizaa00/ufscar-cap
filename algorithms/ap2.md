@@ -29,9 +29,9 @@ begin
 
     quantidadeTotalDeDvds += quantidade
     valorTotalDePreco += preco * quantidade
-    
+
     |> Como na documentacao, quando o preco e quantidade se igualam a 0, encerra-se o input
-    if preco == 0 and quantidade == 0
+    if preco == 0 and quantidade == 0 then
       deveReceberMaisInput <- 0
     endif
   |> Quando o valor é 0 (falso, em boolean), encerra-se o loop
