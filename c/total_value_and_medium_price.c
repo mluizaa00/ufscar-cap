@@ -21,15 +21,15 @@ int main() {
         printf("Digite o preco e a quantidade do produto:");
 
         int quantidade;
-        int preco;
-        scanf("%lf", &quantidade);
-        scanf("%d", &preco);
+        double preco;
+        scanf("%lf", &preco);
+        scanf("%d", &quantidade);
         
         // Verificacao, caso ambos sejam 0, acabou o input
         if (quantidade == 0 && preco == 0) {
             deveContinuarInput = 0;
         }
-
+        
         // Soma os valores para o calculo
         quantidadeTotal += quantidade;
         valorDePrecoTotal += preco * quantidade;

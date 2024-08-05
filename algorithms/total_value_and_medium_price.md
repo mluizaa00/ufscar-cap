@@ -20,7 +20,7 @@ begin
   read valorTotalDePreco <- 0
 
   |> Ler os precos e quantidades
-  read deveReceberMaisInput <- 1
+  read deveReceberMaisInput <- 1  
   repeat 
     read preco
     read quantidade
