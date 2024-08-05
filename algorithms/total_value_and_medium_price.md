@@ -20,21 +20,21 @@ begin
   read valorTotal <- 0
 
   |> Ler os precos e quantidades
-  read shouldContinueLoop <- 1
-
+  read deveReceberMaisInput <- 1
   repeat 
     read price
     read qtd
 
     |> Como na documentacao, quando o preco e qtd se igualam a 0, encerra-se o input
     if price == 0 and qtd == 0
-      shouldContinueLoop <- 0
+      deveReceberMaisInput <- 0
     endif
 
     qtdTotal += qtd
     valorTotal += price * qtd
-  until shouldContinueLoop == 1
+  until deveReceberMaisInput == 0
 
+  |> Calculo do valor medio
   read valorMedio <- valorTotal / qtdTotal
 
   |> Mostrar o resultado

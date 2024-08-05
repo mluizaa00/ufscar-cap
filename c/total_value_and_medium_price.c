@@ -11,11 +11,13 @@
 #include <stdio.h>
 
 int main() {
+    // Iniciar valores padrao de calculo
     double qtdTotal = 0;
     double valorTotal = 0;
 
     int continueLoop = 1;
     do {
+        // Acessar quantidade e preco do dvd
         printf("Digite o preco e a quantidade do produto:");
 
         int quantidade;
@@ -23,14 +25,17 @@ int main() {
         scanf("%lf", &quantidade);
         scanf("%d", &preco);
         
+        // Verificacao, caso ambos sejam 0, acabou o input
         if (quantidade == 0 && preco == 0) {
             continueLoop = 0;
         }
 
+        // Soma os valores para o calculo
         qtdTotal += quantidade;
         valorTotal += preco * quantidade;
     } while (continueLoop == 1);
 
+    // Calculo do valor medio
     double valorMedio = valorTotal / qtdTotal;
 
     printf("Valor medio: %lf", valorMedio);
