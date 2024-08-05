@@ -16,28 +16,28 @@ Output: valor total em estoque e preco medio da unidade de dvd
 
 begin
   |> Inicializar valores default
-  read qtdTotal <- 0
-  read valorTotal <- 0
+  read quantidadeTotalDeDvds <- 0
+  read valorTotalDePreco <- 0
 
   |> Ler os precos e quantidades
   read deveReceberMaisInput <- 1
   repeat 
-    read price
-    read qtd
+    read preco
+    read quantidade
 
-    |> Como na documentacao, quando o preco e qtd se igualam a 0, encerra-se o input
-    if price == 0 and qtd == 0
+    |> Como na documentacao, quando o preco e quantidade se igualam a 0, encerra-se o input
+    if preco == 0 and quantidade == 0
       deveReceberMaisInput <- 0
     endif
 
-    qtdTotal += qtd
-    valorTotal += price * qtd
+    quantidadeTotalDeDvds += quantidade
+    valorTotalDePreco += preco * quantidade
   until deveReceberMaisInput == 0
 
   |> Calculo do valor medio
-  read valorMedio <- valorTotal / qtdTotal
+  read valorMedio <- valorTotalDePreco / quantidadeTotalDeDvds
 
   |> Mostrar o resultado
   write valorMedio
-  write valorTotal
+  write valorTotalDePreco
 end
