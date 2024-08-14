@@ -8,8 +8,6 @@
 # e multiple os valores de uma linha e de uma coluna, calculando a soma total disso
 #
 
-#include <stdio.h>
-
 def main():
     # Pegar dimensões iniciais
     print(f"Qual a dimensão tem a matriz A?");
