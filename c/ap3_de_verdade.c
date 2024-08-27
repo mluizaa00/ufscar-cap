@@ -73,12 +73,31 @@ int main()
     printf("QTD alunos acima do ira medio: %d", acimaDoIra);
 }
 
+/*
+Sub-rotina: calcularIraMedio
+Objetivo: Calcular IRA médio dos alunos
+Parâmetros:
+ - soma: Soma dos IRAs (entrada de dados)
+ - qtdAlunos: Quantidade de alunos (entrada de dados)
+Valor de Retorno:
+- Resultado final do cálculo aritmético
+*/
 int calcularIraMedio(int soma, int qtdAlunos) 
 {
     // calculo da media aritmetica
     return soma / qtdAlunos;
 }
 
+/*
+Sub-rotina: alunosAcimaDoIraMedio
+Objetivo: Calcular a quantidade de alunos acima do IRA médio
+Parâmetros:
+ - alunos: lista dos alunos (entrada de dados)
+ - iraMedio: valor do ira medio entre os alunos (entrada de dados)
+ - qtdAlunos: quantidade de alunos (entrada de dados)
+Valor de Retorno:
+- Quantidade de alunos com IRA acima da média
+*/
 int alunosAcimaDoIraMedio(Aluno alunos[], int iraMedio, int qtdAlunos) 
 {
     int acimaDoIra = 0;
